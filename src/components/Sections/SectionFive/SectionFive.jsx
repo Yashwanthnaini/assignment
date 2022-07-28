@@ -27,9 +27,8 @@ const ipBoxes = [
     }
 ]
 
-const SectionFour = () => {
+const SectionFive = () => {
     return (  
-        
         <>
             {ipBoxes.map((ipBox, index) => {
                 return <CheckBox key={index} name={ipBox.name} title={ipBox.title} message={ipBox.message}/>
@@ -39,4 +38,4 @@ const SectionFour = () => {
     );
 }
  
-export default SectionFour ;
+export default SectionFive;

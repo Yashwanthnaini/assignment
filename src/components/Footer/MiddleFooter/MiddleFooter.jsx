@@ -3,8 +3,13 @@ import AddInfo from "./AdditionalInfo/AdditionalInfo";
 import FollowUs from "./FollowUs/FollowUs";
 import ProCharts from "./ProfessionalCharts/ProfessionalCharts";
 
-import { MFooterContainer, FlexDivOne, FlexDivTwo, P ,LangLink} from "./MiddleFooter.style"
-
+import { 
+        MFooterContainer, 
+        FlexDivOne, 
+        FlexDivTwo, 
+        P,
+        LangLink
+                } from "./MiddleFooter.style"
 
 const Languages = [
     {

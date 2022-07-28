@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
-
 export const DDContainer = styled.div`
     display: flex;
     &:hover #Info{
-        color: ${({theme})=> theme.primaryOrange};
+        color: ${({theme})=> theme.table.info.hoverBorderColor};
     }
-    
 `;
 
 export const DDSection = styled.section`
@@ -14,31 +12,17 @@ export const DDSection = styled.section`
     margin-bottom: 10px;
     padding-right: 10px;
     font : 12px/1.55 "open sans", sans-serif;
-
 `;
 
 export const DDLabel = styled.label`
-    
-    color: #acacaa;
-    font : 12px/1.55 "open sans", sans-serif;
+    color: ${({theme})=> theme.table.header.textColor};
     line-height: 8px;
 `;
 
 export const DropDown = styled.div`
     width: 165px;
     cursor: pointer;
-    position: relative;
-    
-`;
-
-export const IDInfo = styled.div`
-    margin:  17px  auto auto  8px;
-    color: #afacac;
-    cursor: pointer;
-    font-family: 'Roboto Mono', monospace;
-    &:hover {
-        color: ${({theme})=> theme.primaryOrange};
-    }
+    position: relative; 
 `;
 
 export const SelectedOption = styled.div`
@@ -46,15 +30,14 @@ export const SelectedOption = styled.div`
     border-radius: 2px;
     border: solid 2px #ccc;
     &:hover {
-        border: solid 2px ${({theme})=> theme.primaryOrange};
+        border: solid 2px ${({theme})=> theme.table.dropDown.hoverBorderColor};
     }
-    
 `;
 
 export const SOBox = styled.div`
- display : flex;
- justify-content: space-between;
- align-items: center;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const Link = styled.a`
@@ -82,7 +65,6 @@ export const Label = styled.label`
 `;
 
 export const UList = styled.ul`
-    
     width: 165px;
     max-height: ${props => (props.openDropDown ? "500px" : "0px")};
     list-style: none;
@@ -101,7 +83,6 @@ export const UList = styled.ul`
     -o-transition: max-height 0.3s ease-in-out;
     -moz-transition: max-height 0.3s ease-in-out;
     transition: max-height 0.25s ease-in-out;
-    
     overflow-y: hidden;
     overflow-x: hidden;
     &::-webkit-scrollbar {
@@ -111,19 +92,16 @@ export const UList = styled.ul`
 
     position: absolute;
     z-index: 10000;
-
 `;
 
 export const LItem = styled.li`
-    color: #1c6f9e;
+    color: ${({theme})=> theme.table.listItem.textColor};
     border-bottom : solid 1px #ddd;
     &:hover {
-        background: orange;
-        color: #fff;
+        background: ${({theme})=> theme.table.listItem.hoverBgColor};
+        color: ${({theme})=> theme.table.listItem.hoverTextColor};
     }
     transition-property: background, color;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
-    
 `;
-

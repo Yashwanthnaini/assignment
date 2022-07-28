@@ -1,4 +1,7 @@
-import {BFooterContainer, BFooterText} from "./BottomFooter.style";
+import {
+        BFooterContainer, 
+        BFooterText
+                    } from "./BottomFooter.style";
 
 const BottomFooter = () => {
     return ( 

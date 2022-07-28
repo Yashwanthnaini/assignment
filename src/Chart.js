@@ -1,6 +1,7 @@
 import Header from "./components/Header/Header";
 import Info from "./components/Info/Info";
 import Button from "./components/Buttons/SquareButton/SquareButton";
+import SilverButton from "./components/Buttons/SilverButton/SilverButton";
 import Table from "./components/Table/Table";
 import Footer from "./components/Footer/Footer";
 
@@ -31,7 +32,7 @@ const Chart = () => {
                     <Button name="CREATE CHART" />
                     <Button name="PREVIEW" />
                     <Button name="EXCEL or CSV" />
-                    <Button name="RESTART" />
+                    <SilverButton name="RESTART" />
                 </ButtonContainer>
                 <div></div>
             </ButtonTwoArea>

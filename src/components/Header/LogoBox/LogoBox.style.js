@@ -4,8 +4,8 @@ export const LogoGrid = styled.div`
     height:100%;
     width:100%;
     display: flex;
-    column-gap: 10px;
     align-items: end;
+    column-gap: 10px;
     margin-bottom: 15px;
 `;
 
@@ -16,6 +16,6 @@ export const LogoImg = styled.img`
 
 export const LogoText = styled.p`
     margin-bottom: 0;
-    font-size: ${({ theme }) => theme.LogoText.size};
-    font-weight : ${({ theme }) => theme.LogoText.weight};
+    font-size: ${({ theme }) => theme.header.logo.fontSize};
+    font-weight : ${({ theme }) => theme.header.logo.fontWeight};
 `;

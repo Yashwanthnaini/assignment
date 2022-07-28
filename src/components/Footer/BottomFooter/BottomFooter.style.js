@@ -9,14 +9,13 @@ export const BFooterContainer = styled.div`
     place-items: center;
     border-top: 4px solid #000;
     background-image: url(${Pattern});
-    color:${({ theme }) => theme.secondaryLight};
-
+    color:${({ theme }) => theme.footer.bottom.secondaryTextColor};
 `;
 
 export const BFooterText = styled.b`
     width: 85vw;
     display: grid;
     justify-items: left;
-    font-size: ${({ theme }) => theme.LogoText.size};
-    font-weight: ${({ theme }) => theme.LogoText.weight};
+    font-size: ${({ theme }) => theme.header.logo.fontSize};
+    font-weight: ${({ theme }) => theme.header.logo.fontWeight};
 `;

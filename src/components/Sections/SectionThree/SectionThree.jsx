@@ -1,7 +1,10 @@
 import DropDown from "../../InputBox/DropDown/DropDown";
 import Empty from "../../InputBox/Empty/Empty";
 import ToolTipBox from "../../ToolTipBox/ToolTipBox";
-import {SectionThreeContainer , EInfo} from "./SectionThree.style";
+import {
+        SectionContainer, 
+        Info
+                } from "../Sections.style";
 
 const font = ["Bold", "Normal", "Italic", "Bold Italic"];
 
@@ -26,7 +29,7 @@ const ipFields = [
         }
     ];
 
-const fields = [
+const fontFields = [
     {
         name: "Title Font",
         title: "TITLE FONT",
@@ -44,14 +47,14 @@ const SectionThree = () => {
     return ( 
         <>
             {
-                fields.map((field, index) => {
+                fontFields.map((field, index) => {
                     return (
-                        <SectionThreeContainer key = {index}>
+                        <SectionContainer key = {index}>
                             <DropDown IpArray={font} name={field.name} />
-                            <EInfo id="Info">
+                            <Info id="Info">
                                 <ToolTipBox title={field.title} field="" message={field.message} />
-                            </EInfo>
-                        </SectionThreeContainer>
+                            </Info>
+                        </SectionContainer>
                     )
                     }
                 )
@@ -59,12 +62,12 @@ const SectionThree = () => {
             {
                 ipFields.map((field, index) => {
                     return (
-                        <SectionThreeContainer key={index}>
+                        <SectionContainer key={index}>
                             <Empty  name={field.name} />
-                            <EInfo id="Info">
+                            <Info id="Info">
                                 <ToolTipBox title={field.title} field={field.field} message={field.message} />
-                            </EInfo>
-                        </SectionThreeContainer>
+                            </Info>
+                        </SectionContainer>
                     )
                     }
                 )

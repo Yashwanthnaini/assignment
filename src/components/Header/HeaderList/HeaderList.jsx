@@ -1,4 +1,8 @@
-import {NavLinksFlexBox, UnList, LItem} from "./HeaderList.style";
+import {
+        NavLinksFlexBox, 
+        UnList, 
+        LItem
+                } from "./HeaderList.style";
 
 const Links = [
     {
@@ -25,15 +29,13 @@ const Links = [
 ]
 
 const HeaderList = () => {
-
-    
     return ( 
         <NavLinksFlexBox>
             <UnList>
                 {
                     Links.map(link => {
-
-                        if(link.name == "Create Chart"){
+                        if(link.name == "Create Chart")
+                        {
                             return( 
                                 <LItem  
                                     key={link.name}
@@ -43,13 +45,11 @@ const HeaderList = () => {
                                 </LItem>
                             )
                         }
-
                         return( 
                             <LItem key={link.name}>
                                 {link.name}
                             </LItem>
                         )
-                       
                     })
                 }
             </UnList>

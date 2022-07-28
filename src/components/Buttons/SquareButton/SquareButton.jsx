@@ -1,4 +1,6 @@
-import {Button} from "./SquareButton.style";
+import {
+        Button
+            } from "./SquareButton.style";
 
 const SquareButton = ({name}) => {
     return ( 

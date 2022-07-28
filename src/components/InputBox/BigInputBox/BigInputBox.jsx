@@ -1,11 +1,17 @@
-
-import {EIContainer, EISection, EILabel, IPBox, SelectedOption, SOBox, Input, EInfo} from "./BigInputBox.style";
+import {
+        BIContainer, 
+        BISection, 
+        IPBox, 
+        SelectedOption, 
+        SOBox, 
+        Input
+                } from "./BigInputBox.style";
 
 const BigInputBox = ({count}) => {
     const name = `Group ${count+1}`;
     return ( 
-    <EIContainer>
-        <EISection>
+    <BIContainer>
+        <BISection>
             <IPBox>
                 <SelectedOption >
                     <SOBox >
@@ -13,8 +19,8 @@ const BigInputBox = ({count}) => {
                     </SOBox>
                 </SelectedOption>
             </IPBox>     
-        </EISection>
-    </EIContainer>
+        </BISection>
+    </BIContainer>
      );
 }
  

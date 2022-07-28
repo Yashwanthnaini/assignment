@@ -1,6 +1,9 @@
 import Empty from "../../InputBox/Empty/Empty";
 import ToolTipBox from "../../ToolTipBox/ToolTipBox";
-import {SectionTwoContainer , EInfo} from "./SectionTwo.style";
+import {
+        SectionContainer,
+        Info
+                } from "../Sections.style";
 
 const ipFields = [
     {
@@ -41,12 +44,12 @@ const SectionTwo = () => {
             {
                 ipFields.map((field, index) => {
                     return (
-                        <SectionTwoContainer key={index}>
+                        <SectionContainer key={index}>
                             <Empty  name={field.name} />
-                            <EInfo id="Info">
+                            <Info id="Info">
                                 <ToolTipBox title={field.title} field={field.field} message={field.message} />
-                            </EInfo>
-                        </SectionTwoContainer>
+                            </Info>
+                        </SectionContainer>
                     )
                     }
                 )

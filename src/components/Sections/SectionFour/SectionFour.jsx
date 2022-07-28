@@ -30,7 +30,6 @@ const ipBoxes = [
 
 const SectionFour = () => {
     return (  
-        
         <>
             {ipBoxes.map((ipBox, index) => {
                 return <CheckBox key={index} name={ipBox.name} title={ipBox.title} message={ipBox.message}/>

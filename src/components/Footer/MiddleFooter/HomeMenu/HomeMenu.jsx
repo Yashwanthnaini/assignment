@@ -1,4 +1,8 @@
-import {Ulist, LItem} from "./HomeMenu.style"
+import {
+        Ulist, 
+        LItem
+                } from "../MiddleFooter.style";
+
 const homeMenuList = [
     {
         name : "Welcome"

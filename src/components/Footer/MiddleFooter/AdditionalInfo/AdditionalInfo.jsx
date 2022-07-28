@@ -1,4 +1,7 @@
-import { Ulist, LItem } from "../HomeMenu/HomeMenu.style";
+import { 
+        Ulist, 
+        LItem 
+    } from "../MiddleFooter.style";
 const addInfoLinks = [
     {
         name: "FAQ"

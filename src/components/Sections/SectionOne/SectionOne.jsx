@@ -3,7 +3,10 @@ import DropDownInput from "../../InputBox/DropDown/DropDown";
 import ColorDropDown from "../../InputBox/ColorDropDown/ColorDropDown";
 import ToolTipBox from "../../ToolTipBox/ToolTipBox";
 
-import {SectionOneContainer , EInfo} from "./SectionOne.style";
+import {
+        SectionContainer, 
+        Info
+                } from "../Sections.style";
 
 const numIp= [400,500,600,700,800,900,1000,1100,1200];
 
@@ -108,33 +111,36 @@ const SectionOne = () => {
     return ( 
         <>
             <ImageDropDown />
+
             {
                 numFields.map((field, index) => {
                     return (
-                        <SectionOneContainer key = {index}>
+                        <SectionContainer key = {index}>
                             <DropDownInput name={field.name} IpArray={numIp} />
-                            <EInfo id="Info">
+                            <Info id="Info">
                                 <ToolTipBox title={field.title} field="" message={field.message} />
-                            </EInfo>
-                        </SectionOneContainer>
+                            </Info>
+                        </SectionContainer>
                     )
                     }
                 )
             }
-        <ColorDropDown IpArray={backgroundColor} name="Background Color" />
-        {
+
+            <ColorDropDown IpArray={backgroundColor} name="Background Color" />
+            
+            {
                 nameFields.map((field, index) => {
                     return (
-                        <SectionOneContainer key = {index}>
+                        <SectionContainer key = {index}>
                             <DropDownInput name={field.name} IpArray={labelOrientation} />
-                            <EInfo id="Info">
+                            <Info id="Info">
                                 <ToolTipBox title={field.title} field="" message={field.message} />
-                            </EInfo>
-                        </SectionOneContainer>
+                            </Info>
+                        </SectionContainer>
                     )
                     }
                 )
-        }
+            }
         </>
      );
 }

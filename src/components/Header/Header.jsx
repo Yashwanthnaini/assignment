@@ -1,7 +1,9 @@
 
 import LogoBox from "./LogoBox/LogoBox";
 import HeaderList from "./HeaderList/HeaderList";
-import {HeaderContainer} from "./Header.style";
+import {
+        HeaderContainer
+                    } from "./Header.style";
 
 const Header = () => {
     return ( 

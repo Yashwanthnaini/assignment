@@ -1,4 +1,8 @@
-import {TFooterContainer, Div, P} from "./TopFooter.style";
+import {
+        TFooterContainer, 
+        Div, 
+        P
+            } from "./TopFooter.style";
 
 const TopFooter = () => {
     return ( 

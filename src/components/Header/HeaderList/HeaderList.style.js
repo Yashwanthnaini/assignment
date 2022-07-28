@@ -13,8 +13,8 @@ export const UnList = styled.ul`
 export const LItem = styled.li`
     padding: 8px 18px;
     &:hover {
-        background: ${({ theme }) => theme.primaryHover};
-        color: ${({ theme }) => theme.primaryOrange};
+        background: ${({ theme }) => theme.header.list.textBg};
+        color: ${({ theme }) => theme.header.list.textSecondaryColor};
         border-radius: 2px;
     }
 `;

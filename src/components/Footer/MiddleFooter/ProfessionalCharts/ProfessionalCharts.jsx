@@ -1,5 +1,10 @@
-import { Ulist, LItem } from "../HomeMenu/HomeMenu.style";
-import {Textwrap} from "./Professional.style";
+import { 
+        Ulist, 
+        LItem 
+                } from "../MiddleFooter.style";
+import {
+        Textwrap
+                } from "./Professional.style";
 
 const proChartsLinks  = [
     {

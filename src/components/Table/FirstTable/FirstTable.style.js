@@ -1,6 +1,15 @@
 import styled from "styled-components";
 
-export const FTContainer = styled.div``;
+export const FTHeader = styled.header`
+    padding: 5px 30px;
+    border-bottom : 1px solid rgba(0,0,0,.1);
+    background : ${({ theme }) => theme.table.header.bgColor};
+    font-size: ${({ theme }) => theme.table.header.fontSize};
+    font-weight: ${({ theme }) => theme.table.header.fontWeight};
+    color : ${({ theme }) => theme.table.header.textColor};
+    display: flex;
+    justify-content: space-between;
+`;
 
 export const TotalFieldSet = styled.div`
     visibility: ${props => props.isOpen ? "visible" : "hidden"};
@@ -9,31 +18,15 @@ export const TotalFieldSet = styled.div`
     transition: all 1s cubic-bezier(0.49, 0.78, 0, 0.98);
 `;
 
-export const FTHeader = styled.header`
-    padding: 5px 30px;
-    border-bottom : 1px solid rgba(0,0,0,.1);
-    background : rgba(221,221,221,.7);
-    font-size: 18px;
-    font-weight: 600;
-    color : #1c6f9e;
-    display: flex;
-    justify-content: space-between;
-`;
-
-export const FTHeaderData = styled.div`
-    width: 750px;
-    height: 25px;
-`;
 
 export  const FTFieldSet = styled.fieldset`
-   
     padding : 25px 30px 5px;
     border: none;
     background: rgba(255,255,255,.9);
 `;
 
 export  const FTCBFieldSet = styled.fieldset`
-    padding : 10px 30px 5px;
+    padding : 0px 30px 5px;
     border: none;
     background: rgba(255,255,255,.9);
 `;
@@ -41,5 +34,4 @@ export  const FTCBFieldSet = styled.fieldset`
 export const FTFieldData = styled.div`
     display : flex;
     justify-content : space-between;
-
 `;

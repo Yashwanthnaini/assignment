@@ -1,43 +1,16 @@
 import styled from "styled-components";
 
-
-export const CDDContainer = styled.div`
-    display: flex;
-    &:hover #Info{
-        color: ${({theme})=> theme.primaryOrange};
-    }
-    
-`;
-
-export const CDDSection = styled.section`
+export const BCDDSection = styled.section`
     min-height: 1px;
     margin-bottom: 10px;
     padding-right: 10px;
     font : 12px/1.55 "open sans", sans-serif;
-
 `;
 
-export const CDDLabel = styled.label`
-    
-    color: #acacaa;
-    font : 12px/1.55 "open sans", sans-serif;
-    line-height: 8px;
-`;
-
-export const CDropDown = styled.div`
+export const BCDropDown = styled.div`
     width: 100%;
     cursor: pointer;
-    position: relative;
-    
-`;
-
-export const IDInfo = styled.div`
-    margin:  17px  auto auto  8px;
-    color: #afacac;
-    cursor: pointer;
-    &:hover {
-        color: ${({theme})=> theme.primaryOrange};
-    }
+    position: relative; 
 `;
 
 export const SelectedOption = styled.div`
@@ -45,15 +18,14 @@ export const SelectedOption = styled.div`
     border-radius: 2px;
     border: solid 2px #ccc;
     &:hover {
-        border: solid 2px ${({theme})=> theme.primaryOrange};
-    }
-    
+        border: solid 2px ${({theme})=> theme.table.dropDown.hoverBorderColor};
+    } 
 `;
 
 export const SOBox = styled.div`
- display : flex;
- justify-content: space-between;
- align-items: center;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const Link = styled.a`
@@ -81,7 +53,6 @@ export const Label = styled.label`
 `;
 
 export const UList = styled.ul`
-    
     width: 100%;
     max-height: ${props => (props.openDropDown ? "500px" : "0px")};
     list-style: none;
@@ -100,7 +71,6 @@ export const UList = styled.ul`
     -o-transition: max-height 0.3s ease-in-out;
     -moz-transition: max-height 0.3s ease-in-out;
     transition: max-height 0.25s ease-in-out;
-    
     overflow-y: hidden;
     overflow-x: hidden; */
     &::-webkit-scrollbar {
@@ -109,19 +79,17 @@ export const UList = styled.ul`
     }
     position: absolute;
     z-index: 10000;
-
 `;
 
 export const LItem = styled.li`
-    color: #1c6f9e;
+    color: ${({theme})=> theme.table.listItem.textColor};
     border-bottom : solid 1px #ddd;
     &:hover {
-        background: orange;
-        color: #fff;
+        background: ${({theme})=> theme.table.listItem.hoverBgColor};
+        color: ${({theme})=> theme.table.listItem.hoverTextColor};
     }
     transition-property: background, color;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
-    
 `;
 

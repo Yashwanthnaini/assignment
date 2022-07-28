@@ -1,8 +1,15 @@
 
-import {EIContainer, EISection, EILabel, IPBox, SelectedOption, SOBox, Input, EInfo} from "./Empty.style";
+import {
+    EIContainer, 
+    EISection, 
+    EILabel, 
+    IPBox, 
+    SelectedOption, 
+    SOBox, 
+    Input, 
+    } from "./Empty.style";
 
 const Empty = ({name}) => {
-
     return ( 
     <EIContainer>
         <EISection>
@@ -17,7 +24,6 @@ const Empty = ({name}) => {
                 </SelectedOption>
             </IPBox>     
         </EISection>
-        
     </EIContainer>
      );
 }

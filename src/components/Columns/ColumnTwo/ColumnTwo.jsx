@@ -1,7 +1,9 @@
 import BigBox from "../../InputBox/BigBox/BigBox";
 import BigInputBox from "../../InputBox/BigInputBox/BigInputBox";
 import BigColorDropDown from "../../InputBox/BigColorDropDown/BigColorDropDown";
-import {CTContainer} from "./ColumnTwo.style"
+import {
+        CTContainer
+                    } from "./ColumnTwo.style"
 
 const Color = [
     {name: "Default Color" , value: "#ffffff"},
@@ -24,7 +26,6 @@ const ColumnTwo = ({message , count}) => {
             <BigInputBox count={count} />
             <BigColorDropDown IpArray={Color}  /> 
         </CTContainer> 
-        
      );
 }
  

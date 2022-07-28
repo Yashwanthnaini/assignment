@@ -1,25 +1,25 @@
 import styled from "styled-components";
 
-export const CDDContainer = styled.div`
+export const IPContainer = styled.div`
     display: flex;
     &:hover #Info{
         color: ${({theme})=> theme.table.info.hoverBorderColor};
     }
 `;
 
-export const CDDSection = styled.section`
+export const IPSection = styled.section`
     min-height: 1px;
     margin-bottom: 10px;
     padding-right: 10px;
-    font : 12px/1.55 "open sans", sans-serif;
+    font : ${({theme})=> theme.table.dropDown.font};
 `;
 
-export const CDDLabel = styled.label`
+export const IPLabel = styled.label`
     color: ${({theme})=> theme.table.dropDown.textColor};
     line-height: ${({theme})=> theme.table.dropDown.lineHeight};
 `;
 
-export const CDropDown = styled.div`
+export const DropDownContainer = styled.div`
     width: 165px;
     cursor: pointer;
     position: relative;
@@ -30,14 +30,14 @@ export const SelectedOption = styled.div`
     border-radius: 2px;
     border: solid 2px #ccc;
     &:hover {
-        border: solid 2px ${({theme})=> theme.primaryOrange};
+        border: solid 2px ${({theme})=> theme.table.dropDown.hoverBorderColor};
     }
 `;
 
 export const SOBox = styled.div`
- display : flex;
- justify-content: space-between;
- align-items: center;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const Link = styled.a`
@@ -57,15 +57,14 @@ export const ArrowImg = styled.img`
     transition: transform 0s ease-in-out;
 `;
 
-
 export const Label = styled.label`
     margin-left: 5px;
     cursor: pointer;
-    font-size: 15px;
 `;
 
 export const UList = styled.ul`
-    
+    position: absolute;
+    z-index: 10000;
     width: 165px;
     max-height: ${props => (props.openDropDown ? "500px" : "0px")};
     list-style: none;
@@ -84,16 +83,12 @@ export const UList = styled.ul`
     -o-transition: max-height 0.3s ease-in-out;
     -moz-transition: max-height 0.3s ease-in-out;
     transition: max-height 0.25s ease-in-out;
-    
     overflow-y: hidden;
-    overflow-x: hidden; */
+    overflow-x: hidden;
     &::-webkit-scrollbar {
         width: 0px;
         background: transparent;
     }
-    position: absolute;
-    z-index: 10000;
-
 `;
 
 export const LItem = styled.li`
@@ -108,7 +103,7 @@ export const LItem = styled.li`
     transition-timing-function: ease-in-out;
 `;
 
-export const CDInfo = styled.div`
+export const IDInfo = styled.div`
     position: relative;
     margin:  17px  auto auto  8px;
     color: ${({theme})=> theme.table.info.textColor};

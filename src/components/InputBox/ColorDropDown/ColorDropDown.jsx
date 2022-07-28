@@ -3,7 +3,20 @@ import {useOnClickOutside} from '../../../Hooks/hooks';
 import Arrow from "../../../assets/dropdownarrow.png";
 import ToolTipBox from '../../ToolTipBox/ToolTipBox';
 
-import {CDDContainer, CDDSection, CDDLabel, CDropDown, SelectedOption, SOBox, Link, ArrowImg, Label, UList, LItem, IDInfo} from "./ColorDropDown.style";
+import {
+        CDDContainer, 
+        CDDSection, 
+        CDDLabel, 
+        CDropDown, 
+        SelectedOption, 
+        SOBox, 
+        Link, 
+        ArrowImg, 
+        Label, 
+        UList, 
+        LItem, 
+        CDInfo
+                } from "./ColorDropDown.style";
 
 const ColorDropDownInput = ({IpArray , name}) => {
     const [selected, setSelected] = useState(IpArray[0]);
@@ -21,7 +34,6 @@ const ColorDropDownInput = ({IpArray , name}) => {
         setSelected(item);
         setOpenDropDown(!openDropDown);
     }
-
 
     return ( 
     <CDDContainer>
@@ -48,13 +60,12 @@ const ColorDropDownInput = ({IpArray , name}) => {
                         )
                     }
                     )}
-
                 </UList>
             </CDropDown>     
         </CDDSection>
-        <IDInfo id="Info">
+        <CDInfo id="Info">
             <ToolTipBox title="BACKGROUND COLOR" field="" message="Tells ChartGo what color to use for the background of the chart." />
-        </IDInfo>
+        </CDInfo>
     </CDDContainer>
      );
 }

@@ -1,7 +1,16 @@
 import {useState} from 'react';
 import ToolTipBox from "../../ToolTipBox/ToolTipBox";
 
-import {DDContainer, DDSection, DDLabel, DropDown, SelectedOption, SOBox, Link, CBox, UCBox, Span, Label, IDInfo} from "./CheckBox.style";
+import {
+        CBContainer, 
+        SOBox, 
+        Link, 
+        CBox, 
+        UCBox, 
+        Span, 
+        Label, 
+        CBInfo
+                } from "./CheckBox.style";
 
 const CheckBox = ({name,title,message}) => {
 
@@ -12,7 +21,7 @@ const CheckBox = ({name,title,message}) => {
     } 
 
     return ( 
-    <DDContainer>
+    <CBContainer>
          <SOBox onClick={() => { handleSelected();}}>
             {selected ?   
                 <CBox>
@@ -27,10 +36,10 @@ const CheckBox = ({name,title,message}) => {
                     <Label >{name}</Label>
                 </Link>
         </SOBox>
-        <IDInfo id="Info">
+        <CBInfo id="Info">
             <ToolTipBox title={title} field="" message={message} />
-        </IDInfo>
-    </DDContainer>
+        </CBInfo>
+    </CBContainer>
      );
 }
  

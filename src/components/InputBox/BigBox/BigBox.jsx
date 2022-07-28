@@ -1,8 +1,15 @@
-import Plus from "../../../assets/plus.png";
-import {EIContainer, EISection, EILabel, IPBox, SelectedOption, SOBox, TextArea, EInfo} from "./BigBox.style";
+
+import {
+        EIContainer, 
+        EISection, 
+        EILabel, 
+        IPBox, 
+        SelectedOption, 
+        SOBox, 
+        TextArea
+                } from "./BigBox.style";
 
 const Empty = ({message, name}) => {
-
     return ( 
     <EIContainer>
         <EISection>

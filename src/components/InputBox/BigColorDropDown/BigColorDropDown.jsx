@@ -2,8 +2,17 @@ import {useState, useRef} from 'react';
 import {useOnClickOutside} from '../../../Hooks/hooks';
 import Arrow from "../../../assets/dropdownarrow.png";
 
-
-import {CDDContainer, CDDSection, CDDLabel, CDropDown, SelectedOption, SOBox, Link, ArrowImg, Label, UList, LItem, IDInfo} from "./BigColorDropDown.style";
+import {
+        BCDDSection,
+        BCDropDown, 
+        SelectedOption, 
+        SOBox, 
+        Link, 
+        ArrowImg, 
+        Label, 
+        UList, 
+        LItem
+                } from "./BigColorDropDown.style";
 
 const BigColorDropDown = ({IpArray}) => {
     const [selected, setSelected] = useState(IpArray[0]);
@@ -21,11 +30,9 @@ const BigColorDropDown = ({IpArray}) => {
         setOpenDropDown(!openDropDown);
     }
 
-
     return ( 
-    
-        <CDDSection>
-            <CDropDown ref={node}>
+        <BCDDSection>
+            <BCDropDown ref={node}>
                 <SelectedOption  onClick={() => { handleOpenDropDown();}}>
                     <SOBox onClick={() => { handleOpenDropDown();}}>
                         <Link>
@@ -35,7 +42,6 @@ const BigColorDropDown = ({IpArray}) => {
                     </SOBox>
                 </SelectedOption>
                 <UList openDropDown={openDropDown}>
-
                     {IpArray.map((item, index) => {
                         return (
                             <LItem style={{backgroundColor: item.value}} key={index} onClick={() => { handleSelect(item);}}>
@@ -44,11 +50,9 @@ const BigColorDropDown = ({IpArray}) => {
                         )
                     }
                     )}
-
                 </UList>
-            </CDropDown>     
-        </CDDSection>
-    
+            </BCDropDown>     
+        </BCDDSection>
      );
 }
  

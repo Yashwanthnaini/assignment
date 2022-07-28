@@ -3,7 +3,19 @@ import {useOnClickOutside} from '../../../Hooks/hooks';
 import Arrow from "../../../assets/dropdownarrow.png";
 
 
-import {DDContainer, DDSection, DDLabel, DropDown, SelectedOption, SOBox, Link, ArrowImg, Label, UList, LItem, IDInfo} from "./DropDown.style";
+import {
+        DDContainer, 
+        DDSection, 
+        DDLabel, 
+        DropDown, 
+        SelectedOption, 
+        SOBox, 
+        Link, 
+        ArrowImg, 
+        Label, 
+        UList, 
+        LItem
+    } from "./DropDown.style";
 
 const DropDownInput = ({IpArray , name}) => {
 
