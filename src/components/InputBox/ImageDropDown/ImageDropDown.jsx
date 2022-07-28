@@ -1,4 +1,6 @@
-import {useState} from 'react';
+import {useState, useRef} from 'react';
+import { useOnClickOutside } from '../../../Hooks/hooks';
+
 import Arrow from "../../../assets/downarrow.png";
 import Bar from "../../../assets/icon_bar.png";
 import Line from "../../../assets/icon_line.png";
@@ -26,8 +28,14 @@ const chartType = [
 
 const ImageDropDown = () => {
 
+    
+    
+
     const [selected, setSelected] = useState(chartType[0]);
     const [openDropDown, setOpenDropDown] = useState(false);
+
+    const node = useRef();
+    useOnClickOutside(node, () => setOpenDropDown(false));
 
     const handleOpenDropDown = () => {
         setOpenDropDown(!openDropDown);
@@ -60,8 +68,8 @@ const ImageDropDown = () => {
             <IDDLabel>
                 Chart Type
             </IDDLabel>
-            <DropDownContainer>
-                <SelectedOption onClick={() => { handleOpenDropDown();}}>
+            <DropDownContainer ref={node}>
+                <SelectedOption   onClick={() => { handleOpenDropDown();}}>
                     <SOBox onClick={() => { handleOpenDropDown();}}>
                         <Link>
                             {handleSelectOption()}
@@ -69,7 +77,7 @@ const ImageDropDown = () => {
                         <ArrowImg openDropDown={openDropDown} src={Arrow} alt="arrow" />
                     </SOBox>
                 </SelectedOption>
-                <UList openDropDown={openDropDown}>
+                <UList  openDropDown={openDropDown}>
                     <LItem>
                         <Link
                             onClick={() => { handleSelect(chartType[0])}}

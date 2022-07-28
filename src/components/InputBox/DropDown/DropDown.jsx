@@ -1,4 +1,5 @@
-import {useState} from 'react';
+import {useState, useRef} from 'react';
+import {useOnClickOutside} from '../../../Hooks/hooks';
 import Arrow from "../../../assets/dropdownarrow.png";
 
 
@@ -8,6 +9,9 @@ const DropDownInput = ({IpArray , name}) => {
 
     const [selected, setSelected] = useState(IpArray[0]);
     const [openDropDown, setOpenDropDown] = useState(false);
+
+    const node = useRef();
+    useOnClickOutside(node, () => setOpenDropDown(false));
 
     const handleOpenDropDown = () => {
         setOpenDropDown(!openDropDown);
@@ -25,8 +29,8 @@ const DropDownInput = ({IpArray , name}) => {
             <DDLabel>
                 {name}
             </DDLabel>
-            <DropDown>
-                <SelectedOption onClick={() => { handleOpenDropDown();}}>
+            <DropDown ref={node}>
+                <SelectedOption   onClick={() => { handleOpenDropDown();}}>
                     <SOBox onClick={() => { handleOpenDropDown();}}>
                         <Link>
                             <Label >{selected}</Label>
@@ -34,11 +38,11 @@ const DropDownInput = ({IpArray , name}) => {
                         <ArrowImg src={Arrow} alt="arrow" />
                     </SOBox>
                 </SelectedOption>
-                <UList openDropDown={openDropDown}>
+                <UList  openDropDown={openDropDown}>
 
                     {IpArray.map((item, index) => {
                         return (
-                            <LItem key={index} onClick={() => { handleSelect(item);}}>
+                            <LItem ref={node} key={index} onClick={() => { handleSelect(item);}}>
                                 <Label>{item}</Label>
                             </LItem>
                         )

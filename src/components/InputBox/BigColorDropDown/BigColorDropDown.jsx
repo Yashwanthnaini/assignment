@@ -1,4 +1,5 @@
-import {useState} from 'react';
+import {useState, useRef} from 'react';
+import {useOnClickOutside} from '../../../Hooks/hooks';
 import Arrow from "../../../assets/dropdownarrow.png";
 
 
@@ -8,6 +9,8 @@ const BigColorDropDown = ({IpArray}) => {
     const [selected, setSelected] = useState(IpArray[0]);
 
     const [openDropDown, setOpenDropDown] = useState(false);
+    const node = useRef();
+    useOnClickOutside(node, () => setOpenDropDown(false));
 
     const handleOpenDropDown = () => {
         setOpenDropDown(!openDropDown);
@@ -22,8 +25,8 @@ const BigColorDropDown = ({IpArray}) => {
     return ( 
     
         <CDDSection>
-            <CDropDown>
-                <SelectedOption onClick={() => { handleOpenDropDown();}}>
+            <CDropDown ref={node}>
+                <SelectedOption  onClick={() => { handleOpenDropDown();}}>
                     <SOBox onClick={() => { handleOpenDropDown();}}>
                         <Link>
                             <Label >{selected.name}</Label>
