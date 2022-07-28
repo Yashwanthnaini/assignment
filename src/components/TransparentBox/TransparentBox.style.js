@@ -6,7 +6,7 @@ export const EIContainer = styled.div`
     &:hover #Info{
         color: ${({theme})=> theme.primaryOrange};
     }
-    width: 300px;
+    width: 100%;
     
 `;
 
@@ -15,7 +15,7 @@ export const EISection = styled.section`
     margin-bottom: 10px;
     padding-right: 10px;
     font : 12px/1.55 "open sans", sans-serif;
-    width: 300px;
+    width: 100%;
 
 `;
 
@@ -27,7 +27,7 @@ export const EILabel = styled.label`
 `;
 
 export const IPBox = styled.div`
-    width: 300px;
+    width: 100%;
     cursor: pointer;
     
 `;
@@ -42,7 +42,7 @@ export const EInfo = styled.div`
 `;
 
 export const SelectedOption = styled.div`
-    width: 300px;
+    width: 100%;
     border-radius: 2px;
     border: transparent;
     

@@ -25,7 +25,7 @@ export const CDDLabel = styled.label`
 `;
 
 export const CDropDown = styled.div`
-    width: 300px;
+    width: 100%;
     cursor: pointer;
     position: relative;
     
@@ -41,7 +41,7 @@ export const IDInfo = styled.div`
 `;
 
 export const SelectedOption = styled.div`
-    width: 300px;
+    width: 100%;
     border-radius: 2px;
     border: solid 2px #ccc;
     &:hover {
@@ -82,7 +82,7 @@ export const Label = styled.label`
 
 export const UList = styled.ul`
     
-    width: 300px;
+    width: 100%;
     max-height: ${props => (props.openDropDown ? "500px" : "0px")};
     list-style: none;
     padding: 0;

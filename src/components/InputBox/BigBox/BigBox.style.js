@@ -18,7 +18,7 @@ export const EISection = styled.section`
 `;
 
 export const EILabel = styled.label`
-    width: 300px;
+    width: 100%;
     color: #acacaa;
     margin-bottom : 10px;
     font : 12px/1.55 "open sans", sans-serif;
@@ -28,7 +28,7 @@ export const EILabel = styled.label`
 `;
 
 export const IPBox = styled.div`
-    width: 300px;
+    width: 100%;
     cursor: pointer;
     
 `;
@@ -43,7 +43,7 @@ export const EInfo = styled.div`
 `;
 
 export const SelectedOption = styled.div`
-    width: 300px;
+   width: 100%;
     border-radius: 2px;
     border: solid 2px #ccc;
     &:hover {
@@ -60,7 +60,7 @@ export const SOBox = styled.div`
 `;
 
 export const TextArea = styled.textarea`
-    width: 300px;
+    width: 100%;
     height: 100%;
     border: none;
     background-color: transparent;

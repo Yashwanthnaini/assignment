@@ -15,14 +15,14 @@ const Color = [
     {name: "Orange", value: "#ffa500"}
 ]
 
-const ColumnTwo = ({message}) => {
+const ColumnTwo = ({message , count}) => {
     
 
     return (
         <CTContainer>
             <BigBox  name="Y Data" message={message}/>
-            <BigInputBox name="Group" />
-            <BigColorDropDown IpArray={Color}/> 
+            <BigInputBox count={count} />
+            <BigColorDropDown IpArray={Color}  /> 
         </CTContainer> 
         
      );

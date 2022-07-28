@@ -20,7 +20,7 @@ const BigColorDropDown = ({IpArray}) => {
 
 
     return ( 
-    <CDDContainer>
+    
         <CDDSection>
             <CDropDown>
                 <SelectedOption onClick={() => { handleOpenDropDown();}}>
@@ -45,7 +45,7 @@ const BigColorDropDown = ({IpArray}) => {
                 </UList>
             </CDropDown>     
         </CDDSection>
-    </CDDContainer>
+    
      );
 }
  

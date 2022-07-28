@@ -25,14 +25,16 @@ export const STHeaderData = styled.div`
     align-items: center;
     width: 750px;
     height: 25px;
+    
 `;
 
 export  const STFieldSet = styled.fieldset`
-   
+    
     padding : 25px 30px 5px;
     border: none;
     background: rgba(255,255,255,.9);
     display: flex;
+    justify-content : flex-start;
 `;
 
 export  const STCBFieldSet = styled.fieldset`
@@ -42,8 +44,32 @@ export  const STCBFieldSet = styled.fieldset`
 `;
 
 export const STFieldData = styled.div`
+    width: auto;
     display : flex;
     justify-content : space-between;
     margin-left : 0;
 
+`;
+
+export const PlusImg = styled.img`
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -5px;
+    left: -60px;
+`;
+
+
+export const MinusImg = styled.img`
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -5px;
+    left: -50px;
+`;
+
+export const P = styled.p`
+    margin-left: 20px;
 `;

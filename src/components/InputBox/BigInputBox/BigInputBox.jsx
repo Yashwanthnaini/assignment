@@ -1,15 +1,15 @@
 
 import {EIContainer, EISection, EILabel, IPBox, SelectedOption, SOBox, Input, EInfo} from "./BigInputBox.style";
 
-const BigInputBox = ({name}) => {
-
+const BigInputBox = ({count}) => {
+    const name = `Group ${count+1}`;
     return ( 
     <EIContainer>
         <EISection>
             <IPBox>
                 <SelectedOption >
                     <SOBox >
-                        <Input name={name} value="Group 1"/>
+                        <Input  default-value={name} value="Group"/>
                     </SOBox>
                 </SelectedOption>
             </IPBox>     
