@@ -8,12 +8,11 @@ const Empty = ({message, name}) => {
         <EISection>
             <EILabel>
                 {name}
-                <img src={Plus} alt="plusSymbol" />
             </EILabel>
             <IPBox>
                 <SelectedOption >
                     <SOBox >
-                        <TextArea name="xaxis" rows="6" columns="5" >
+                        <TextArea default-value="" name="xaxis" rows="6" columns="5" >
                             {message}
                         </TextArea>
                     </SOBox>

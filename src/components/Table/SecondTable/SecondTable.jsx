@@ -4,6 +4,11 @@ import ColumnTwo from '../../Columns/ColumnTwo/ColumnTwo';
 import ColumnThree from '../../Columns/ColumnThree/ColumnThree';
 import {STContainer, TotalFieldSet, STHeader, STHeaderData, STFieldSet, STFieldData} from "./SecondTable.style";
 const SecondTable = () => {
+
+    const pc = 0;
+
+    const message = '600' + '\r\n' + '200' + '\r\n' + '300'+ '\r\n' + '400' + '\r\n' + '300' + '\r\n' + '200' ;
+
     
     const [isOpen, setIsOpen] = useState(true);
 
@@ -27,7 +32,7 @@ const SecondTable = () => {
                         <ColumnOne />
                     </STFieldData>
                     <STFieldData>
-                        <ColumnTwo />
+                        <ColumnTwo message= {message} />
                     </STFieldData>
                     <STFieldData>
                         <ColumnThree />

@@ -20,6 +20,7 @@ export const EISection = styled.section`
 export const EILabel = styled.label`
     width: 300px;
     color: #acacaa;
+    margin-bottom : 10px;
     font : 12px/1.55 "open sans", sans-serif;
     line-height: 8px;
     display : flex;

@@ -41,8 +41,8 @@ const SectionTwo = () => {
             {
                 ipFields.map((field, index) => {
                     return (
-                        <SectionTwoContainer>
-                            <Empty key={index} name={field.name} />
+                        <SectionTwoContainer key={index}>
+                            <Empty  name={field.name} />
                             <EInfo id="Info">
                                 <ToolTipBox title={field.title} field={field.field} message={field.message} />
                             </EInfo>

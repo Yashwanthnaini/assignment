@@ -15,8 +15,8 @@ const Color = [
     {name: "Orange", value: "#ffa500"}
 ]
 
-const ColumnTwo = () => {
-    const message = '600' + '\r\n' + '200' + '\r\n' + '300'+ '\r\n' + '400' + '\r\n' + '300' + '\r\n' + '200' ;
+const ColumnTwo = ({message}) => {
+    
 
     return (
         <CTContainer>

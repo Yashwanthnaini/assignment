@@ -6,7 +6,7 @@ export const TotalFieldSet = styled.div`
     visibility: ${props => props.isOpen ? "visible" : "hidden"};
     opacity: ${props => props.isOpen ? 1 : 0};
     max-height: ${props => props.isOpen ? "1000px" : "0px"};
-    transition: visibility 0.3s, opacity 0s ,max-height 0.3s linear;
+    transition: all 1s cubic-bezier(0.49, 0.78, 0, 0.98);
 `;
 
 export const STHeader = styled.header`
