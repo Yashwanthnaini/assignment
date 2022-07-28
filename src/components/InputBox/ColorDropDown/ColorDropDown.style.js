@@ -35,6 +35,7 @@ export const IDInfo = styled.div`
     margin:  17px  auto auto  8px;
     color: #afacac;
     font-family: 'Roboto Mono', monospace;
+    position: relative;
     cursor: pointer;
     &:hover {
         color: ${({theme})=> theme.primaryOrange};

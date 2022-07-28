@@ -13,7 +13,10 @@ const ToolTipBox = ({title, field, message}) => {
         <TTContainer show={show}>
             <TTP>
                 {title}
-                <br />
+               
+                {
+                    field == "" ? "" :  <br />
+                }
                 {field}
                 <br />
                 {message}

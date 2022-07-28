@@ -33,6 +33,7 @@ export const DropDown = styled.div`
 `;
 
 export const IDInfo = styled.div`
+    position: relative;
     margin:  0px  auto auto  11px;
     color: #afacac;
     font-family: 'Roboto Mono', monospace;

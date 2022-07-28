@@ -1,7 +1,9 @@
 import ImageDropDown from "../../InputBox/ImageDropDown/ImageDropDown"
 import DropDownInput from "../../InputBox/DropDown/DropDown";
 import ColorDropDown from "../../InputBox/ColorDropDown/ColorDropDown";
+import ToolTipBox from "../../ToolTipBox/ToolTipBox";
 
+import {SectionOneContainer , EInfo} from "./SectionOne.style";
 
 const numIp= [400,500,600,700,800,900,1000,1100,1200];
 
@@ -80,14 +82,59 @@ const backgroundColor = [
 const labelOrientation = ["Horizontal", "Vertical" , "Diagonal"];
     
 
+const numFields = [
+    {
+        name: "Width",
+        title: "WIDTH",
+        message: "Tells ChartGo how wide you want your chart to be. Size in pixels.",
+    },
+    {
+        name: "Height",
+        title: "HEIGHT",
+        message: "Tells ChartGo how high you want your chart to be. Size in pixels.",
+    }
+]
+
+const nameFields = [
+    {
+        name: "Label Orientation",
+        title: "LABEL ORIENTATION",
+        message: "Specifies the direction in which your x labels will print.",
+        array : {labelOrientation}
+    }
+]
+
 const SectionOne = () => {
     return ( 
         <>
-        <ImageDropDown />
-        <DropDownInput IpArray={numIp} name="Width" />
-        <DropDownInput IpArray={numIp} name="Height" />
+            <ImageDropDown />
+            {
+                numFields.map((field, index) => {
+                    return (
+                        <SectionOneContainer key = {index}>
+                            <DropDownInput name={field.name} IpArray={numIp} />
+                            <EInfo id="Info">
+                                <ToolTipBox title={field.title} field="" message={field.message} />
+                            </EInfo>
+                        </SectionOneContainer>
+                    )
+                    }
+                )
+            }
         <ColorDropDown IpArray={backgroundColor} name="Background Color" />
-        <DropDownInput IpArray={labelOrientation} name="Label Orientation" />
+        {
+                nameFields.map((field, index) => {
+                    return (
+                        <SectionOneContainer key = {index}>
+                            <DropDownInput name={field.name} IpArray={labelOrientation} />
+                            <EInfo id="Info">
+                                <ToolTipBox title={field.title} field="" message={field.message} />
+                            </EInfo>
+                        </SectionOneContainer>
+                    )
+                    }
+                )
+        }
         </>
      );
 }

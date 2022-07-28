@@ -4,7 +4,7 @@ import Bar from "../../../assets/icon_bar.png";
 import Line from "../../../assets/icon_line.png";
 import Pie from "../../../assets/icon_pie.png";
 import Area from "../../../assets/icon_area.png";
-
+import ToolTipBox from "../../ToolTipBox/ToolTipBox"
 
 import {IDContainer, IDDSection, IDDLabel, DropDownContainer, SelectedOption, SOBox, Link, ArrowImg, Image, Label, UList, LItem, IDInfo} from "./ImageDropDown.style"
 
@@ -109,7 +109,7 @@ const ImageDropDown = () => {
             </DropDownContainer>     
         </IDDSection>
         <IDInfo id="Info">
-            <p>i</p>
+            <ToolTipBox title="CHART TYPE" field="" message="Tells ChartGo to create a bar, pie, line or area chart." />
         </IDInfo>
     </IDContainer>
      );

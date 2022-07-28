@@ -1,4 +1,4 @@
-import ToolTipBox from "../../ToolTipBox/ToolTipBox";
+
 import {EIContainer, EISection, EILabel, IPBox, SelectedOption, SOBox, Input, EInfo} from "./Empty.style";
 
 const Empty = ({name}) => {
@@ -17,9 +17,7 @@ const Empty = ({name}) => {
                 </SelectedOption>
             </IPBox>     
         </EISection>
-        <EInfo id="Info">
-            <ToolTipBox title="Optional" field="char " message="write it buddy" />
-        </EInfo>
+        
     </EIContainer>
      );
 }

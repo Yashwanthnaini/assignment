@@ -31,6 +31,7 @@ export const DropDownContainer = styled.div`
 `;
 
 export const IDInfo = styled.div`
+    position: relative;
     margin:  17px  auto auto  8px;
     color: #afacac;
     cursor: pointer;

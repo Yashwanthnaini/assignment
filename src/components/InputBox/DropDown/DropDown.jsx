@@ -47,9 +47,6 @@ const DropDownInput = ({IpArray , name}) => {
                 </UList>
             </DropDown>     
         </DDSection>
-        <IDInfo id="Info">
-            <p>i</p>
-        </IDInfo>
     </DDContainer>
      );
 }

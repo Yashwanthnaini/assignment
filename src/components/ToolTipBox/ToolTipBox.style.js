@@ -3,15 +3,16 @@ import closeBtn from "../../assets/closeBtn.png";
 
 export const TTContainer = styled.div`
     display: ${(props) => (props.show ? "block" : "none")};
-    position: absolute;
+    width: ${(props) => (props.show ? "200px" : "0px")};
     z-index: 50000;
-    top: 400px;
-    left: 300px;
+    position: absolute;
+    right: 0px;
+    bottom: 70px;
     background: #555;
     border: 2px solid #444;
     margin: 0;
     padding: 6px 12px;
-    border-radius: 12px 12px 12px 0;
+    border-radius: 0px 12px 0px 12px;
     box-shadow: 2px 2px 3px #3232323d;
     outline: 0;
     font: 13px 'Open Sans',sans-serif;
@@ -36,7 +37,7 @@ export const CrossMark = styled.a`
     text-indent: -9999px;
     outline: 0;
     position: absolute;
-    top: -20px;
+    bottom: -20px;
     right: -30px;
     cursor: pointer;
     margin: 2px;

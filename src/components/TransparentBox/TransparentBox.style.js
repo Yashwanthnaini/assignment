@@ -45,9 +45,6 @@ export const SelectedOption = styled.div`
     width: 300px;
     border-radius: 2px;
     border: transparent;
-    &:hover {
-        border: solid 2px ${({theme})=> theme.primaryOrange};
-    }
     
 `;
 
