@@ -1,15 +1,21 @@
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import Info from "./components/Info/Info";
 import Button from "./components/Buttons/SquareButton/SquareButton";
 import Table from "./components/Table/Table";
-import {ButtonContainer, ButtonArea, ButtonTwoArea} from "./Chart.style";
+import Footer from "./components/Footer/Footer";
+
+import {
+        ButtonContainer, 
+        ButtonOneArea, 
+        ButtonTwoArea
+                    } from "./Chart.style";
+
 const Chart = () => {
     return ( 
-        <div>
+        <>
             <Header />
             <Info />
-            <ButtonArea >
+            <ButtonOneArea >
                 <div></div>
                 <ButtonContainer>
                     <Button name="CREATE CHART" />
@@ -17,10 +23,8 @@ const Chart = () => {
                     <Button name="EXCEL or CSV" />
                 </ButtonContainer>
                 <div></div>
-            </ButtonArea>
-            
+            </ButtonOneArea>
             <Table />
-
             <ButtonTwoArea >
                 <div></div>
                 <ButtonContainer>
@@ -31,9 +35,8 @@ const Chart = () => {
                 </ButtonContainer>
                 <div></div>
             </ButtonTwoArea>
-
             <Footer />
-        </div>
+        </>
      );
 }
  

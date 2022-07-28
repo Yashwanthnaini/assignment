@@ -1,6 +1,6 @@
 import styled from "styled-components"; 
 
-export const ButtonArea = styled.div`
+export const ButtonOneArea = styled.div`
     display: grid;
     grid-template-columns: 0.3fr 4fr 7fr;
 `;
