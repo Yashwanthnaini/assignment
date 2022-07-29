@@ -18,7 +18,7 @@ export const DropDown = styled.div`
 export const CBInfo = styled.div`
     position: relative;
     margin:  0px  auto auto  11px;
-    color: #afacac;
+    color: ${({theme})=> theme.table.info.textColor};
     font-family: 'Roboto Mono', monospace;
     cursor: pointer;
     &:hover {
