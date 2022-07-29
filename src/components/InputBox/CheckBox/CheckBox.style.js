@@ -12,7 +12,7 @@ export const CBContainer = styled.div`
 
 export const DropDown = styled.div`
     width: 165px;
-    cursor: pointer;
+    cursor: pointer; 
 `;
 
 export const CBInfo = styled.div`
@@ -41,6 +41,7 @@ export const CBox = styled.div`
     padding: 5px;
     border-radius: 2px;
     border: solid 2px ${({theme})=> theme.primaryOrange};
+    background:#f0fff0;
 `;
 export const UCBox = styled.div`
     display : flex;
@@ -51,6 +52,7 @@ export const UCBox = styled.div`
     padding: 5px;
     border-radius: 2px;
     border: solid 2px #ccc;
+    background:#f0fff0;
     &:hover {
         border: solid 2px ${({theme})=> theme.primaryOrange};
     }

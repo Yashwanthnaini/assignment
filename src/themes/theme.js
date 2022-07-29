@@ -52,6 +52,9 @@ export const theme = {
           hoverTextColor:"#FFFFFF"
         }
     },
+    checkbox:{
+      bgColor: "#f0fff0"
+    },
     footer:{
       top:{
           bgColor: '#EEEEEE',
